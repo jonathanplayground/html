@@ -2,7 +2,7 @@
 <html> 
     <head>
         <link rel="stylesheet" href="styles.css">
-        <title>cuadroPreguntas</title>        
+        <title>cuadroPreguntas</title>  
     </head>
     
     <body>
@@ -10,30 +10,63 @@
             <div class="desktop">
                 <div class="contenedor">
                     <div class="cuadroPregunta">
-                        <h1>ENUNCIADO DE PREGUNTA</h1>
+                        <h1 id="preguntas">ENUNCIADO DE PREGUNTA</h1>  
                     </div>
                     <div class="cuadroCorrecto">
                         <h2>correcto/incorrecto</h2>
                     </div>
                     <div class="contenedorOpciones">
-                        <div class="opcion">
-                            <h1>opción 1</h1>
+                        <div class = "opcion">
+                            <button class="opcion" id="opcion1">
+                                <p  id="parrafo1">OPCION 1</p>
+                            </button>
+                            
                         </div>
-                        <div class="opcion">
-                            <h1>opción 2</h1>
+                        <div class = "opcion" id="opcion2">
+                            <p  id="parrafo2">OPCION 2</p>
                         </div>
-                        <div class="opcion">
-                            <h1>opción 3</h1>
+                        <div class = "opcion" id="opcion3">
+                            <p  id="parrafo3">OPCION 3</p>
                         </div>
-                        <div class="opcion">
-                            <h1>opción 4</h1>
+                        <div class = "opcion" id="opcion4">
+                            <p  id="parrafo4">OPCION 4</p>
                         </div>
                     </div>
-                    <div class="cuadroSiguiente">
-                        <h2>SIGUENTE</h2>
+                    <div id="botonSiguiente">
+                        <button class = "cuadroSiguiente" onclick="contaSiguiente()" >siguiente</button>
                     </div>
+                </div>
+                <div class="contador">
+                    <h2>1</h2>
                 </div>
             </div>
         </div>
+        <script>
+            var siguiente = 0;
+            var pregunta = 0;
+            function contaSiguiente(){
+                siguiente = siguiente + 1;
+                pregunta = pregunta + 1;
+                cambioPregunta();
+            }
+            function cambioPregunta(){
+                    if(pregunta == 1){
+                        document.getElementById("preguntas").innerHTML = "CUANTOS PARES SON TRES MOSCAS";
+                        document.getElementById("parrafo1").innerHTML = "1";
+                        document.getElementById("parrafo2").innerHTML = "2";
+                        document.getElementById("parrafo3").innerHTML = "3";
+                        document.getElementById("parrafo4").innerHTML = "4";
+                        
+                    }
+                    else if(pregunta == 2)
+                    {
+                        document.getElementById("preguntas").innerHTML = "Segunda pregunta";
+                    }
+                    else if(pregunta == 3)
+                    {
+                        document.getElementById("preguntas").innerHTML = "Tercera pregunta";
+                    }
+            }
+        </script>
     </body>
 </html>

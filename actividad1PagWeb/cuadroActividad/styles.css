@@ -6,11 +6,17 @@ div{
 h1{
     color: white;
 }
-.opcion{
-    width: 580px;
-    height: 125px;
-    background-color: #C4C4C4;
-    border-radius: 20px;
+p{
+    color: white;
+}
+.contador{
+    width: 50px;
+    height: 50px;
+    background-color: #AF9164;
+    position: absolute;
+    top: 942px;
+    left: 1322px;
+
 }
 .contenedor{
     display: flex;
@@ -18,7 +24,7 @@ h1{
     width: 1200px;
     height:900px;
     background-color:#F7F3E3;
-    border: solid;
+    border: 1px solid;
     justify-content: center;
     position: absolute;
     left: 119px;
@@ -26,7 +32,7 @@ h1{
 }
 .contenedorOpciones{
     display: flex;
-    flex-flow: column;
+    flex-wrap: wrap;
     background-color: #2B2118;
     width:1200px;
     height: 368px;
@@ -37,9 +43,9 @@ h1{
     display: flex;
     width: 563px;
     height: 167px;
-    background-color: #AF9164;
-    justify-content: center;
+    background-color:   #AF9164;
     position: absolute;
+    font-size: 40px;
     top: 317px;
 }
 .cuadroPregunta{
@@ -50,15 +56,18 @@ h1{
     position: absolute;
     top: 53px;
     border-radius: 60px;
-    
 }
 .cuadroSiguiente{
     background-color: #00FF19;
     height: 150px;
     width: 400px;
     border-radius: 80px;
+    border: 0px;
     position: absolute;
     top: 497px;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 .desktop{    
     display:flex;
@@ -68,4 +77,12 @@ h1{
     background-color: #6F1A07;
     justify-content: center;
     position: relative;
+}
+.opcion{
+    width: 580px;
+    height: 125px;
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
 }
