@@ -10,61 +10,110 @@
             <div class="desktop">
                 <div class="contenedor">
                     <div class="cuadroPregunta">
-                        <h1 id="preguntas">ENUNCIADO DE PREGUNTA</h1>  
+                        <h1 id="preguntas">Enunciado pregunta</h1>  
                     </div>
                     <div class="cuadroCorrecto">
-                        <h2>correcto/incorrecto</h2>
+                        <h2 id="correcto">correcto/incorrecto</h2>
                     </div>
                     <div class="contenedorOpciones">
-                        <div class = "opcion">
-                            <button class="opcion" id="opcion1">
-                                <p  id="parrafo1">OPCION 1</p>
-                            </button>
-                            
-                        </div>
-                        <div class = "opcion" id="opcion2">
-                            <p  id="parrafo2">OPCION 2</p>
-                        </div>
-                        <div class = "opcion" id="opcion3">
-                            <p  id="parrafo3">OPCION 3</p>
-                        </div>
-                        <div class = "opcion" id="opcion4">
-                            <p  id="parrafo4">OPCION 4</p>
-                        </div>
+                        <button class="opcion" id="opcion1" onclick="respuesta1()">
+                            <p  id="parrafo1">OPCION 1</p>
+                        </button>
+                        <button class="opcion" id="opcion2" onclick="respuesta2()">  
+                            <p id="parrafo2">OPCION 2</p>
+                        </button>
+                        <button class="opcion" id="opcion3" onclick="respuesta3()">  
+                            <p id="parrafo3">OPCION 3</p>  
+                        </button>
+                        <button class="opcion" id="opcion4" onclick="respuesta4()">  
+                            <p id="parrafo4">OPCION 4</p>  
+                        </button>
                     </div>
                     <div id="botonSiguiente">
                         <button class = "cuadroSiguiente" onclick="contaSiguiente()" >siguiente</button>
                     </div>
                 </div>
                 <div class="contador">
-                    <h2>1</h2>
+                    <h3 id="conta">0</h3>
                 </div>
             </div>
         </div>
         <script>
             var siguiente = 0;
             var pregunta = 0;
+            var respuesta = 0;
+            var contador = 0;
+
             function contaSiguiente(){
                 siguiente = siguiente + 1;
                 pregunta = pregunta + 1;
                 cambioPregunta();
             }
+            function respuesta1(){
+                respuesta = 1;
+            }
+            function respuesta2(){
+                respuesta = 2;
+            }
+            function respuesta3(){
+                respuesta = 3;
+            }
+            function respuesta4(){
+                respuesta = 4;
+            }
             function cambioPregunta(){
                     if(pregunta == 1){
-                        document.getElementById("preguntas").innerHTML = "CUANTOS PARES SON TRES MOSCAS";
+                        document.getElementById("preguntas").innerHTML = "¿Cuántos pares son tres moscas?";
                         document.getElementById("parrafo1").innerHTML = "1";
                         document.getElementById("parrafo2").innerHTML = "2";
                         document.getElementById("parrafo3").innerHTML = "3";
                         document.getElementById("parrafo4").innerHTML = "4";
                         
+                        if(respuesta == 1){
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else{
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                        respuesta = 0;
                     }
                     else if(pregunta == 2)
                     {
-                        document.getElementById("preguntas").innerHTML = "Segunda pregunta";
+                        document.getElementById("preguntas").innerHTML = "¿Cuántas esferas del dragon existen en la tierra?";
+                        document.getElementById("parrafo1").innerHTML = "5";
+                        document.getElementById("parrafo2").innerHTML = "7";
+                        document.getElementById("parrafo3").innerHTML = "9";
+                        document.getElementById("parrafo4").innerHTML = "8";
+
+                        if(respuesta == 2){
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else{
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                        respuesta = 0;
                     }
                     else if(pregunta == 3)
                     {
-                        document.getElementById("preguntas").innerHTML = "Tercera pregunta";
+                        document.getElementById("preguntas").innerHTML = "¿Cuántas personas habitan Colombia?";
+                        document.getElementById("parrafo1").innerHTML = "10'000.000";
+                        document.getElementById("parrafo2").innerHTML = "49'000.000";
+                        document.getElementById("parrafo3").innerHTML = "39'000.000";
+                        document.getElementById("parrafo4").innerHTML = "28'000.000";
+
+                        if(respuesta == 2){
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else{
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                        respuesta = 0;
                     }
             }
         </script>
