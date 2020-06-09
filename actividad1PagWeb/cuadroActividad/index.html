@@ -62,19 +62,25 @@
                 respuesta = 4;
             }
             function cambioPregunta(){
-                    if(pregunta == 1){
-                        document.getElementById("preguntas").innerHTML = "¿Cuántos pares son tres moscas?";
-                        document.getElementById("parrafo1").innerHTML = "1";
-                        document.getElementById("parrafo2").innerHTML = "2";
-                        document.getElementById("parrafo3").innerHTML = "3";
-                        document.getElementById("parrafo4").innerHTML = "4";
-                        
-                        if(respuesta == 1){
+                    if(pregunta == 1)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿Cuál es el lugar más frío de la tierra?";
+                        document.getElementById("parrafo1").innerHTML = "La Antártida";
+                        document.getElementById("parrafo2").innerHTML = "Yellowknife/Canada";
+                        document.getElementById("parrafo3").innerHTML = "Greolandia";
+                        document.getElementById("parrafo4").innerHTML = "Yakutsk/Siberia";
+                        if(respuesta == 0)
+                        {
+                            document.getElementById("correcto").innerHTML = "correcto/incorrecto"; 
+                        }
+                        else if(respuesta == 1)
+                        {
                             document.getElementById("correcto").innerHTML = "CORRECTO!";
                             contador = contador + 1;
                             document.getElementById("conta").innerHTML = contador;
                         }
-                        else{
+                        else
+                        {
                             document.getElementById("correcto").innerHTML = "INCORRECTO!";
                         }
                         respuesta = 0;
@@ -87,12 +93,14 @@
                         document.getElementById("parrafo3").innerHTML = "9";
                         document.getElementById("parrafo4").innerHTML = "8";
 
-                        if(respuesta == 2){
+                        if(respuesta == 2)
+                        {
                             document.getElementById("correcto").innerHTML = "CORRECTO!";
                             contador = contador + 1;
                             document.getElementById("conta").innerHTML = contador;
                         }
-                        else{
+                        else
+                        {
                             document.getElementById("correcto").innerHTML = "INCORRECTO!";
                         }
                         respuesta = 0;
@@ -105,7 +113,45 @@
                         document.getElementById("parrafo3").innerHTML = "39'000.000";
                         document.getElementById("parrafo4").innerHTML = "28'000.000";
 
+                        if(respuesta == 2)
+                        {
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else
+                        {
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                        respuesta = 0;
+                    }
+                    else if(pregunta == 4)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿De qué colores es la bandera de México?";
+                        document.getElementById("parrafo1").innerHTML = "verde, negro y blanco";
+                        document.getElementById("parrafo2").innerHTML = "verde, blanco y rojo";
+                        document.getElementById("parrafo3").innerHTML = "verde, amarillo y rojo";
+                        document.getElementById("parrafo4").innerHTML = "verde, azul y blanco";
+
                         if(respuesta == 2){
+                            document.getElementById("correcto").innerHTML = "CORRECTO!";
+                            contador = contador + 1;
+                            document.getElementById("conta").innerHTML = contador;
+                        }
+                        else{
+                            document.getElementById("correcto").innerHTML = "INCORRECTO!";
+                        }
+                        respuesta = 0;
+                    }
+                    else if(pregunta == 5)
+                    {
+                        document.getElementById("preguntas").innerHTML = "¿Quién pintó “la última cena”?";
+                        document.getElementById("parrafo1").innerHTML = "Pablo Picaso";
+                        document.getElementById("parrafo2").innerHTML = "Salvador Dalí";
+                        document.getElementById("parrafo3").innerHTML = "Vincent van Gogh";
+                        document.getElementById("parrafo4").innerHTML = "Leonardo da Vinci";
+
+                        if(respuesta == 4){
                             document.getElementById("correcto").innerHTML = "CORRECTO!";
                             contador = contador + 1;
                             document.getElementById("conta").innerHTML = contador;
