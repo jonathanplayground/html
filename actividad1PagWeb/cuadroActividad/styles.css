@@ -1,5 +1,6 @@
 div{
     display: flex;
+    flex-wrap: wrap;
     background-color: #E5E5E5;
     justify-content: center;
 }
@@ -8,9 +9,8 @@ h1{
 }
 h2{
     position: absolute;
-    justify-content: center;
-    font-size: 30px;
-    top: 30px;
+    font-size: 50px;
+    
 }
 /*h3{
     position: absolute;
@@ -31,6 +31,8 @@ p{
     position: absolute;
     top: 942px;
     left: 1322px;
+    font-size: 25px;
+    line-height: 1px;
 }
 .contenedor{
     display: flex;
@@ -43,10 +45,13 @@ p{
     position: absolute;
     left: 119px;
     top: 89px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .contenedorOpciones{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    justify-content: 1px space-between;
     background-color: #2B2118;
     width:1200px;
     height: 368px;
@@ -59,7 +64,7 @@ p{
     height: 167px;
     background-color:   #AF9164;
     position: absolute;
-    font-size: 40px;
+    justify-content: center;
     top: 317px;
 }
 .cuadroPregunta{
@@ -70,6 +75,8 @@ p{
     position: absolute;
     top: 53px;
     border-radius: 60px;
+    line-height: 120px;
+    
 }
 .cuadroSiguiente{
     background-color: #00FF19;
@@ -81,6 +88,7 @@ p{
     top: 497px;
     text-align: center;
     font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
 }
 .desktop{    
@@ -91,12 +99,22 @@ p{
     background-color: #6F1A07;
     justify-content: center;
     position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .opcion{
+    display: flex;
+    flex-flow: wrap;
     width: 580px;
     height: 125px;
     background-color: #C4C4C4;
-    border-radius: 30px;
+    
+    border-radius: 30px; 
     cursor: pointer;
     font-size: 30px;
+    position: relative;
+    top: 30px;
+    bottom: 5px;
+ 
+    justify-content: center;
+    line-height: normal;
 }
